@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="lander.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Lander</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="logo.png" alt="Yibe" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </header>
+    <div class="content-lan">
+    <div class="imgbx">
+        <img src="yibe.png" class="yep">
+    </div>
+    </div>
+    </section>
+    <section class="appl">
+        <div class="pk">
+            <h2 class="lef">About Us</h2>
+            <p class="para">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer 
+                took a galley of type and scrambled it to make a type specimen book. It has survived not 
+                only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                 It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class="center">
+            <div class="mobile">
+                <div class="screen">
+                    <img src="yibe.png" class="dk">
+                    <h2 class="feeg">we Provide Internships</h2>
+                    <h2 class="feeg2">We provide Jobs</h2>
+                    <h2 class="feeg3">Log in to the World of Yibe</h2>
+                    <h2 class="feeg4">Feel the vibe of<br><span id="yi1">YIBE</span></h2>
+                </div>
+                <div class="home">
+                </div>
+                <div class="inner"></div>
+                <ul class="volume">
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="silent">
+                    <li></li>
+                </ul>
+                <ul class="sleep">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="test">
+        <iframe class="frame" src="../login page/login.html" title="W3Schools Free Online Web Tutorials"></iframe>
+    </section>
+    
+        <!--Gsap Scrollers-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script>
+            ScrollTrigger.matchMedia({
+        "(min-width:800px)":function(){
+            let tl=gsap.timeline({
+                scrollTrigger:{
+                  trigger:".content-lan",
+                  start:"center center",
+                  end:"center top",
+                  scrub:1,
+                  markers:true,
+                  pin:true
+                }
+            });
+            tl.to(".imgbx",{y:500,opacity:0})
+        }
+    })
+
+    ScrollTrigger.matchMedia({
+        "(min-width:800px)":function(){
+            let tl=gsap.timeline({
+                scrollTrigger:{
+                  trigger:".appl",
+                  start:"center center",
+                  end:"center top",
+                  scrub:1,
+                  markers:true,
+                  pin:true
+                }
+            });
+            
+            tl.from(".appl",{background:"#3775ae",duration:0.5})
+            tl.from(".center",{rotate:-90,x:-200})
+            tl.from(".screen",{background:"#e4d7ad"})
+            tl.from(".dk",{opacity:0})
+            tl.from(".lef",{x:-200,opacity:0})
+            tl.from(".para",{opacity:0})
+            tl.to(".dk",{y:-300,opacity:0})
+            tl.from(".feeg",{y:-400})
+            tl.to(".feeg",{opacity:0})
+            tl.from(".feeg2",{y:-500})
+            tl.to(".feeg2",{opacity:0})
+            tl.from(".feeg3",{y:-800})
+            tl.to(".feeg3",{opacity:0})
+            tl.from(".feeg4",{y:-800})
+            tl.to(".feeg4",{opacity:0})
+            tl.to("dk",{y:-100})
+            
+        }
+    })
+    </script>
+
+    <!--For Mobile-->
+    <script>
+        ScrollTrigger.matchMedia({
+        "(max-width:799px)":function(){
+            let tl=gsap.timeline({
+                scrollTrigger:{
+                  trigger:".content-lan",
+                  start:"center center",
+                  end:"center top",
+                  scrub:1,
+                  markers:true,
+                  pin:true
+                }
+            });
+            tl.to(".imgbx",{y:300,opacity:0})
+        }
+    })
+    
+    ScrollTrigger.matchMedia({
+        "(max-width:799px)":function(){
+            let tl=gsap.timeline({
+                scrollTrigger:{
+                  trigger:".appl",
+                  start:"center center",
+                  end:"center top",
+                  scrub:1,
+                  markers:true,
+                  pin:true
+                }
+            });
+
+            
+            tl.from(".screen",{background:"#e4d7ad"})
+            tl.from(".dk",{opacity:0})
+            tl.from(".center",{y:-200})
+            tl.from(".lef",{x:-200,opacity:0})
+            tl.from(".para",{opacity:0})
+            tl.to(".dk",{y:-300,opacity:0})
+            tl.from(".feeg",{y:-400})
+            tl.to(".feeg",{opacity:0})
+            tl.from(".feeg2",{y:-500})
+            tl.to(".feeg2",{opacity:0})
+            tl.from(".feeg3",{y:-800})
+            tl.to(".feeg3",{opacity:0})
+            tl.from(".feeg4",{y:-800})
+        }
+    })
+    </script>
+    
+</body>
+</html>
